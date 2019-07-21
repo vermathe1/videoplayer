@@ -1,46 +1,72 @@
 import React from 'react';
+import { connect } from "react-redux";
 import TextField from '../components/commons/textfield';
+import { Button } from '../components/commons/button';
+import { addingPlayList } from "../actions";
 
-export default class AddToPlayList extends React.Component {
+class AddToPlayList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+     artist : "",
+     title : "",
+     videoUrl : ""
+    }
+    this.onChange = this.onChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+    onChange(e,fieldName){
+      this.setState({[fieldName] : e.target.value})
+    }
+
+    handleSubmit(e){
+      e.preventDefault();
+      this.props.dispatch(addingPlayList(this.state))
+      this.setState({artist:"",title:"",videoUrl :""})
+    }
+
   render(){
     return(
-    <section>
+    <section className="playlist-section">
       <header>
       <h2>Add to Playlist</h2>
       </header>
-      <form>
+      <form onSubmit={e=>this.handleSubmit(e)}>
         <div>
           <TextField
           label="Artist"
           type="text"
-          id="artist"
-          
+          name="artist"
+          onChange = {this.onChange}
           />
           <TextField
           label="Title"
           type="text"
-          id="title"
+          name="title"
+          onChange = {this.onChange}
          
           />
           <TextField
           label="Video URL"
           type="url"
-          id="videoUrl"
-  
+          name="videoUrl"
+          onChange = {this.onChange}
           />
         </div>
-        <footer >
-          <button
+        <footer className="form-btn">
+          <Button
           type="button"
-         
           label="Cancel"
-          variant="raised"
+          className ="blue-btn"
           />
-          <button type="submit" label="Add" variant="raised" />
+          <Button type="submit" label="Add"  className ="blue-btn" />
         </footer>
       </form>
     </section>
       );
   }
 }
+
+export default connect()(AddToPlayList);
 

@@ -5,8 +5,20 @@ import App from './containers';
 import * as serviceWorker from './serviceWorker';
 import configureStore from './configureStore';
 import { Provider } from 'react-redux';
+import {loadStorage,saveStorage} from './localStorage/localStorageApi';
 
-const store = configureStore();
+const store = configureStore(loadStorage());
+
+//const getLocalStorredState = loadStorage();
+//const store = createStore(todoApp,getLocalStorredState);
+
+store.subscribe(()=>{
+	saveStorage({
+		playList: store.getState().playList,
+		currentIndex : store.getState().currentIndex
+	})
+});
+
 
 ReactDOM.render(
 	<Provider store ={ store } >

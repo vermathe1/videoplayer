@@ -1,4 +1,4 @@
-const playList = ( state = [], action ) => {
+const playList = ( state = [{id:0, title: "love1 Song", artist: "Himesh", videoUrl: "http://mirrors.standaloneinstaller.com/video-sample/dolbycanyon.m4v"}], action ) => {
   switch (action.type) {
     case 'ADD_TO_PLAYLIST':
       return [
@@ -6,7 +6,8 @@ const playList = ( state = [], action ) => {
         {
           title: action.title,
           artist: action.artist,
-          videoUrl: action.videoUrl
+          videoUrl: action.videoUrl,
+          id:action.id
         }
       ];
     default:
