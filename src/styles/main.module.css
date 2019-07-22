@@ -1,0 +1,47 @@
+.main {
+  background: #fff8f5;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.playerSec {
+  width: 600px;
+}
+.playerSec video {
+  max-width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .mainSec {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+  .playerSec {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .playerSec video {
+    max-width: 100%;
+    height: 450px;
+  }
+
+  .mainSec {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 118px;
+  }
+  .playListSec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

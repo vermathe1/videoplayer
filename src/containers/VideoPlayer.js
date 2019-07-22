@@ -2,8 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { selectPlayList } from '../actions'
 
-class PlayerRoot extends React.Component {
-  playNextVideo(props) {
+class VideoPlayer extends React.Component {
+  playNextVideo = () => {
     let { playList, currentIndex } = this.props
     let lengthOfPlayList = playList.length
     let nextToPlayIndex = (currentIndex + 1) % lengthOfPlayList
@@ -18,7 +18,6 @@ class PlayerRoot extends React.Component {
         controls
         autoPlay
         onEnded={() => this.playNextVideo()}
-        width="100%"
       >
         Sorry your browser doesn't support HTML5 videos!!
       </video>
@@ -34,4 +33,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(PlayerRoot)
+export default connect(mapStateToProps)(VideoPlayer)

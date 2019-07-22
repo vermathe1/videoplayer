@@ -1,8 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import TextField from '../components/commons/textfield'
-import { Button } from '../components/commons/button'
+import TextField from '../components/commons/Textfield'
+import { Button } from '../components/commons/Button'
 import { addingPlayList } from '../actions'
+import styles from '../styles/addToPlayList.module.css'
 
 class AddToPlayList extends React.Component {
   constructor(props) {
@@ -17,11 +18,11 @@ class AddToPlayList extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  onChange(e, fieldName) {
+  onChange = (e, fieldName) => {
     this.setState({ [fieldName]: e.target.value })
   }
 
-  handleSubmit(e) {
+  handleSubmit = e => {
     e.preventDefault()
     this.props.dispatch(addingPlayList(this.state))
     this.setState({ artist: ' ', title: ' ', videoUrl: ' ' })
@@ -29,11 +30,11 @@ class AddToPlayList extends React.Component {
 
   render() {
     return (
-      <section className="add-playlist-section">
-        <header className="center-header">
+      <section className={styles.addPlaylistSection}>
+        <header className={styles.centerHeader}>
           <h2>Add to Playlist</h2>
         </header>
-        <form onSubmit={e => this.handleSubmit(e)}>
+        <form onSubmit={this.handleSubmit}>
           <div>
             <TextField
               label="Artist"
@@ -41,7 +42,7 @@ class AddToPlayList extends React.Component {
               name="artist"
               onChange={this.onChange}
               val={this.state.artist || ''}
-              class_name="textbox"
+              className={styles.textbox}
             />
             <TextField
               label="Title"
@@ -49,7 +50,7 @@ class AddToPlayList extends React.Component {
               name="title"
               onChange={this.onChange}
               val={this.state.title || ''}
-              class_name="textbox"
+              className={styles.textbox}
             />
             <TextField
               label="Video URL"
@@ -57,14 +58,14 @@ class AddToPlayList extends React.Component {
               name="videoUrl"
               onChange={this.onChange}
               val={this.state.videoUrl || ''}
-              class_name="textbox"
+              className={styles.textbox}
             />
           </div>
-          <footer className="form-btn">
+          <footer className={styles.formBtn}>
             <Button
               type="submit"
               label="Add To Playlist"
-              className="blue-btn"
+              className={styles.blueBtn}
             />
           </footer>
         </form>

@@ -6,5 +6,5 @@ import rootReducer from './reducers'
 const logger = createLogger()
 const middleWare = applyMiddleware(thunk, logger)
 const configureStore = initiallValue =>
-	createStore(rootReducer, initiallValue, middleWare)
+  createStore(rootReducer, initiallValue, middleWare)
 export default configureStore

@@ -2,8 +2,8 @@ const playList = (
   state = [
     {
       id: 0,
-      title: 'love1 Song',
-      artist: 'Himesh',
+      title: 'awesome Song',
+      artist: 'A R Rehman',
       videoUrl:
         'http://mirrors.standaloneinstaller.com/video-sample/dolbycanyon.m4v',
     },

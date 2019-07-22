@@ -1,0 +1,47 @@
+.playlistSec {
+  height: 400px;
+  overflow: auto;
+}
+.textCenter {
+  text-align: center;
+}
+.playlistHeading {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+table.table {
+  width: 100%;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 0.25em;
+}
+
+.table tr {
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+.table tr:hover,
+.table td:hover {
+  background-color: #d3d3d3;
+}
+
+tbody {
+  height: 120px;
+  overflow-y: auto;
+}
+.currentSelectedList {
+  color: red;
+}
+
+@media only screen and (max-width: 768px) {
+  .playListSec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
