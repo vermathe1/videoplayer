@@ -1,22 +1,19 @@
-let index = 1;
+let index = 1
 
-export const addingPlayList = (videoInfo)=>{
-	console.log(index);
-	const {title,artist,videoUrl} = videoInfo;
-	return{
-		type:'ADD_TO_PLAYLIST',
+export const addingPlayList = videoInfo => {
+	const { title, artist, videoUrl } = videoInfo
+	return {
+		type: 'ADD_TO_PLAYLIST',
 		id: index++,
 		title,
 		artist,
-		videoUrl
-		
-	};
-};
+		videoUrl,
+	}
+}
 
-export const selectPlayList = (currentIndex) => {
-	console.log(currentIndex)
+export const selectPlayList = currentIndex => {
 	return {
-		type:'SET_CURRENT_INDEX',
-		currentIndex
-	};
-};
+		type: 'SET_CURRENT_INDEX',
+		currentIndex,
+	}
+}

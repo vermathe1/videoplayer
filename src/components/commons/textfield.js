@@ -1,22 +1,20 @@
-import React from 'react';
-
-
+import React from 'react'
 
 class TextField extends React.Component {
-	render(){
-		const {type,name,label,onChange} = this.props;
-		return(
-			<div className="textbox">
-				<label htmlFor= {label} >{ label }</label>
+	render() {
+		const { type, name, label, onChange, class_name } = this.props
+		return (
+			<div className={class_name}>
+				<label htmlFor={label}>{label}</label>
 				<input
-				type={type}
-				name={name}
-				onChange={e=>onChange(e,name)}
-				required
+					type={type}
+					name={name}
+					onChange={e => onChange(e, name)}
+					required
+					value={this.props.val}
 				/>
-			</div> 
-		);
+			</div>
+		)
 	}
 }
-
-export default TextField;
+export default TextField

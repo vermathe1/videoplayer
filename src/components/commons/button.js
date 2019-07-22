@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-export const Button = (props) => {
-	const {label, type, className} = props;
+export const Button = props => {
+	const { label, type, className } = props
 	return (
-		<button type={type} className={className} >
+		<button type={type} className={className}>
 			{label}
 		</button>
 	)
