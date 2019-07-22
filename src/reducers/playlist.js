@@ -5,7 +5,7 @@ const playList = (
       title: 'awesome Song',
       artist: 'A R Rehman',
       videoUrl:
-        'http://mirrors.standaloneinstaller.com/video-sample/dolbycanyon.m4v',
+        'http://techslides.com/demos/sample-videos/small.mp4',
     },
   ],
   action
