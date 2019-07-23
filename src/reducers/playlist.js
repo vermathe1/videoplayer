@@ -6,7 +6,7 @@ const playList = (
       artist: 'A R Rehman',
       videoUrl:
         'http://techslides.com/demos/sample-videos/small.mp4',
-    },
+    }
   ],
   action
 ) => {
