@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Textfield />  matches the snapshop 1`] = `
+<div>
+  <label />
+  <input
+    onChange={[Function]}
+    required={true}
+  />
+</div>
+`;

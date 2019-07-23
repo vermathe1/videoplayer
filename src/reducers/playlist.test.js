@@ -7,8 +7,7 @@ describe('Add To PlayList reducer', () => {
         id: 0,
         title: 'awesome Song',
         artist: 'A R Rehman',
-        videoUrl:
-          'http://techslides.com/demos/sample-videos/small.mp4',
+        videoUrl: 'http://techslides.com/demos/sample-videos/small.mp4',
       },
     ])
   })
@@ -27,7 +26,7 @@ describe('Add To PlayList reducer', () => {
         id: 0,
         title: 'awesome Song',
         artist: 'A R Rehman',
-        videoUrl:'http://techslides.com/demos/sample-videos/small.mp4',
+        videoUrl: 'http://techslides.com/demos/sample-videos/small.mp4',
       },
       {
         id: 1,

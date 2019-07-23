@@ -5,7 +5,7 @@ import { Button } from '../components/commons/Button'
 import { addingPlayList } from '../actions'
 import styles from '../styles/addToPlayList.module.css'
 
-class AddToPlayList extends React.Component {
+export class AddToPlayList extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -25,7 +25,7 @@ class AddToPlayList extends React.Component {
   handleSubmit = e => {
     e.preventDefault()
     this.props.dispatch(addingPlayList(this.state))
-    this.setState({ artist: ' ', title: ' ', videoUrl: ' ' })
+    this.setState({ artist: '', title: '', videoUrl: '' })
   }
 
   render() {

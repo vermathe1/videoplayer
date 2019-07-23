@@ -1,7 +1,6 @@
 .playerSec video {
   max-width: 100%;
 }
-
 @media only screen and (min-width: 768px) {
   .playerSec video {
     max-width: 100%;

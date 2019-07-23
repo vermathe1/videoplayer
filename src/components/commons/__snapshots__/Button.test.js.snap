@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Button />  matches the snapshop 1`] = `<button />`;
+
 exports[`Button Component  matches the snapshop 1`] = `<button />`;
