@@ -19,8 +19,8 @@ jobs:
     steps:
       - checkout
 
-      - run: yarn install
+      - run: npm install
 
 
       # run tests!
-      - run: yarn test
+      - run: npm test
