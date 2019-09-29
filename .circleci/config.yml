@@ -19,11 +19,7 @@ jobs:
     steps:
       - checkout
 
-      - run:
-          name: install
-          command: yarn install
-          environmet: 
-            NODE_ENV: test
+      - run: yarn install
 
 
       # run tests!
